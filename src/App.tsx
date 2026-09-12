@@ -8,6 +8,7 @@ import type { technologyType } from './components/types/technologyType'
 import Footer from './components/Footer'
 
 
+
 const technologiesFetch=async(): Promise<technologyType[]>=>{
   const res=await fetch('/data.json')
   const data= await res.json()
