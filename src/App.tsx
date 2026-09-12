@@ -11,7 +11,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const technologiesFetch=async(): Promise<technologyType[]>=>{
-  const res= await fetch(`${import.meta.env.BASE_URL}data.json`)
+  const res= await fetch('./data.json')
   const data= await res.json()
   return data;
 }
