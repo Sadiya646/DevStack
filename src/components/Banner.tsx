@@ -8,7 +8,9 @@ const Banner = () => {
                 <div className='max-w-xl space-y-6'>
                     <h1 className='text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight'>
                         Build Your Ideal <br />
-                        <span className='bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent'>
+                        <span className='bg-brand-gradient bg-clip-text text-transparent'
+                        style={{ backgroundImage: "var(--brand-gradient)" }}
+                        >
                             Development Stack
                         </span>
                     </h1>
@@ -19,7 +21,9 @@ const Banner = () => {
                     
                     {/* Btn*/}
                     <div className='flex flex-wrap items-center gap-4 pt-2'>
-                        <button className='px-6 py-3 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-medium rounded-full hover:opacity-90 transition-opacity shadow-md'>
+                        <button className='px-6 py-3  text-white font-medium rounded-full hover:opacity-90 transition-opacity shadow-md'
+                         style={{ background: "var(--brand-gradient)" }}
+                        >
                             Explore Technologies
                         </button>
                         <button className='px-6 py-3 border border-gray-200 text-gray-700 font-medium rounded-full hover:border-gray-400 transition-colors bg-white'>
