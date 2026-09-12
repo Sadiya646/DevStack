@@ -16,7 +16,7 @@ const Navbar = () => {
 
 
         
-        <div className='hidden md:flex items-center gap-2 mx-auto md:mx-0'>
+        <div className='flex items-center gap-2 mx-auto md:mx-0'>
             <img src={Logo} alt="Logo" className='h-8 w-auto' />
         </div>
 

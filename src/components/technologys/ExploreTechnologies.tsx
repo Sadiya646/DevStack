@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { technologyType } from "../types/technologyType";
+import { toast } from "react-toastify";
 
 interface ExploreTechnologiesProps {
     Technologys: technologyType[];
@@ -9,21 +10,29 @@ const ExploreTechnologies = ({ Technologys }: ExploreTechnologiesProps) => {
 
     // 1.select kora technology joma rakhar jonno
 const[selectedStack,setSelectedStack]=useState<technologyType[]>([])
+
+
+
 // 2. button click korle sstack a jog korar function
 const handleAddToStack=(tech:technologyType)=>{
 
     // check kora hocche item ache kina
 const isAlreadySelected = selectedStack.find((item) => item.id === tech.id);
         if (isAlreadySelected) {
-            alert("This technology is already selected in your stack!!")
+            toast.warning("This technology is already selected in your stack!!")
             return;
             
         }
         setSelectedStack([...selectedStack, tech]);
+        toast.success(`${tech.name} added to stack!`)
 }
 
 
 
+const handleRemoveAll = () => {
+        setSelectedStack([]);
+        toast.error("All technologies removed from stack!");
+    };
 
 
 
@@ -39,7 +48,7 @@ const isAlreadySelected = selectedStack.find((item) => item.id === tech.id);
             {/* card and stack */}
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
                 
-                {/* Left Side: Tech Cards Grid (ল্যাপটপে ৩ কলাম নিয়ে থাকবে) */}
+                
                 <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {
                         Technologys.map((technology) => {
@@ -118,7 +127,7 @@ const isAlreadySelected = selectedStack.find((item) => item.id === tech.id);
                                 ))}
 
                                 <button 
-                                    onClick={() => setSelectedStack([])}
+                                    onClick={handleRemoveAll}
                                     className="w-full mt-4 py-2 text-sm font-medium text-red-600 border border-red-200 rounded-xl hover:bg-red-50 transition-colors"
                                 >
                                     Remove All
