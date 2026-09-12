@@ -37,7 +37,7 @@ const handleRemoveAll = () => {
 
 
     return (
-        <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="max-w-7xl mx-auto px-6 py-8">
             <h2 className="text-4xl font-extrabold text-gray-900">
                 Explore the <span className="text-pink-600">Technologies</span>
             </h2>
