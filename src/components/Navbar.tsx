@@ -3,24 +3,20 @@ import { useState } from 'react';
 import Logo from '../assets/logo-text.png'
 const Navbar = () => {
 
-    const [isOpen,setIsOpen]=useState(false);
+   
     return (
  <nav className='sticky top-0 z-50 bg-white shadow-sm w-full'>
     <div className='max-w-7xl mx-auto px-6 py-4 flex items-center justify-between'>
-
-        <div className='flex items-center gap-4 md:hidden'>
-            <button onClick={() => setIsOpen(!isOpen)}
-                        className='text-gray-700 focus:outline-none text-2xl'
-                        aria-label="Toggle Menu"
-                    >
-                        {isOpen ? '✕' : '☰'}
-                
-            </button>
-        </div>
+<div className='flex items-center md:hidden'>
+                    <span className='text-gray-700 text-2xl cursor-pointer'>
+                        ☰
+                    </span>
+                </div>
+        
 
 
         
-        <div className='flex items-center gap-2 mx-auto md:mx-0'>
+        <div className='hidden md:flex items-center gap-2 mx-auto md:mx-0'>
             <img src={Logo} alt="Logo" className='h-8 w-auto' />
         </div>
 
@@ -42,6 +38,11 @@ const Navbar = () => {
         </div>
 
     </div>
+
+
+
+
+
 </nav>
     );
 };
