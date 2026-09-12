@@ -40,7 +40,9 @@ const handleRemoveAll = () => {
         <div className="max-w-7xl mx-auto px-6 py-8">
             <h2 className="text-4xl font-extrabold text-gray-900">
                 Explore the <span className="bg-brand-gradient bg-clip-text text-transparent"
-                style={{ backgroundImage: "var(--brand-gradient)" }}>Technologies</span>
+                style={{ backgroundImage: "var(--brand-gradient)" }}
+                
+                >Technologies</span>
             </h2>
             <p className="text-gray-500 mt-3 text-xl mb-8">
                 Pick one technology per category to build your ideal stack.
