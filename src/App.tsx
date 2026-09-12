@@ -22,7 +22,7 @@ function App() {
     <>
 <Navbar/>
 <Banner/>
-<Suspense fallback={ <h1>Loading..</h1>}>
+<Suspense fallback={ <h1 className='max-w-7xl mx-auto text-center p-5 text-5xl font-bold'>Loading..</h1>}>
   <Technologys technologiesPromise={technologiesPromise} />
 </Suspense>
 
