@@ -3,7 +3,7 @@ import FooterImage from '../assets/logo-text.png'
 
 const Footer = () => {
     return (
-        <footer className="bg-white border-t border-gray-100 text-gray-600">
+        <footer className=" border-t border-gray-200 text-gray-600">
             <div className="max-w-7xl mx-auto px-6 py-12">
                 
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
@@ -55,6 +55,16 @@ const Footer = () => {
                             <li><a href="" className="hover:text-gray-900 transition-colors">Privacy Policy</a></li>
                             <li><a href="" className="hover:text-gray-900 transition-colors">Terms of Service</a></li>
                         </ul>
+                    </div>
+                </div>
+
+{/* bottom */}
+
+                <div className="pt-8 border-t border-gray-300 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-600 gap-4">
+                    <p>© 2026 Dev Stack. All rights reserved.</p>
+                    <div className="flex items-center gap-6">
+                        <a href="" className="hover:text-gray-800 transition-colors">Privacy</a>
+                        <a href="" className="hover:text-gray-800 transition-colors">Terms</a>
                     </div>
                 </div>
 
