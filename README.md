@@ -44,6 +44,8 @@
 ) : (
     <div className="space-y-4">...</div>
 )}
+```
+
 ### vii. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
 **Answer:**
 * **Parent to Child:** We pass data down using **props**.
